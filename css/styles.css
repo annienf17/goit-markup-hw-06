@@ -268,7 +268,6 @@ color: var(--color-blue);
 
  .col-4 h3 {
      font-weight: 700;
-
      line-height: 1.1;
      text-transform: uppercase;
      margin-top: 0;
@@ -385,6 +384,10 @@ section h2 {
  }
  
 /* nasi klienci section */
+.clients .clients-logos {
+    padding: var(--padding-zero);
+    margin: var(--margin-zero);
+}
 .clients-logos {
     display: flex;
     justify-content: center;
@@ -516,7 +519,7 @@ section h2 {
 }
 .footer .container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 70px;
 }
 /* general styles for footer list */
@@ -559,7 +562,7 @@ section h2 {
     display: flex;
     gap: 10px;
 }
-.join-us h3 {
+.footer h3 {
     font-size: 14px;
     font-weight: 700;
     line-height: 1.2;
@@ -577,6 +580,7 @@ section h2 {
     background-color: rgba(255, 255, 255, 0.1);
     cursor: pointer;
     }
+
 .footer-social-media li{
     --color1: var(--color-white);
     fill: var(--color1); 
@@ -585,14 +589,33 @@ section h2 {
 .footer-social-media li:hover {
     background-color: var(--color-blue);
 }
+/* newsletter */
+.footer .button-main {
+    padding: 10px 42px;
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    box-shadow: 0 4px 4px 0 rgba(0 0 0 / .15);
+    text-align: center;
+    letter-spacing: var(--letter-spacing-large);
+    line-height: 1.9;  
+}
 
+.newsletter-input input[type="email"] {
+    width: 358px;
+    padding: 15px 16px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0 0 0 / .15));
+    border-radius: 4px;
+    color: rgba(255 255 255 / .6);
+    margin-right: 12px;
+}
 
 /* modal window */
 
 .backdrop { 
     cursor: not-allowed;
     background-color: rgba(0 0 0 / .2);
-    justify-content: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -613,12 +636,19 @@ section h2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 2rem 1rem;
+    padding: 40px;
     box-sizing: border-box;
     cursor: initial;
     width: 528px;
     min-height: 581px;
     background-color: var(--color-white);
+    color: var(--color-text);
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: .01em;
+    text-align: left;
+
+    /* shadow */
     box-shadow: 
         0px 1px 3px rgba(0 0 0 / .12), 
         0px 1px 1px rgba(0 0 0 / .14), 
@@ -630,6 +660,20 @@ section h2 {
     transition-duration: 1s;
     transform: translateX(-50%) translateY(-50%) scale(1);  
    
+}
+.modal h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1.2;
+    margin: var(--margin-zero);
+    text-align: center; 
+}
+
+.modal input, 
+.modal textarea {
+    width: 100%;
+    resize: none;
 }
 
   /* button close */

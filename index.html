@@ -68,13 +68,50 @@
 
         <!-- call to action button -->
         <button type="button" class="button button-main" data-modal-open>Zamow usluge</button>
-
+        <!-- modal hidden background  -->
         <div class="backdrop is-hidden" data-modal>
 
-          <!-- modal hidden background  -->
+          <!-- modal white form -->
           <div class="modal" data-modal>
 
+            <!-- content -->
+            <h4>Zostaw swoje dane w formularzu ponizej</h4>
 
+            <form action="" name="contact-form">
+              <div class="form-group" role="group">
+                <!-- imie -->
+                <div class="form-field">
+                  <label for="name">Imie</label>
+                  <input id="name" type="text" name="name">
+                </div>
+
+                <!-- phone -->
+                <div class="form-field">
+                  <label for="phone">Telefon</label>
+                  <input id="phone" type="tel" name="phone">
+                </div>
+
+                <!-- Email -->
+                <div class="form-field">
+                  <label for="email">Email</label>
+                  <input id="email" type="email" name="email">
+                </div>
+
+                <!-- Komentarz -->
+                <div class="form-field">
+                  <label for="comment">Komentarz</label>
+                  <textarea id="comment" name="comment" rows="5" placeholder="Wprowadz tekst"></textarea>
+                </div>
+
+                <!-- rules  -->
+                <div class="form-field">
+                  <input type="checkbox" name="rules" value="rules" id="rules" />
+                  <label for="rules">Oswiadczam iz akceptuje Regulamin i Polityke Prywatnosci</label>
+                </div>
+
+                <!-- submit button -->
+                <button class="button button-main" type="submit">Wyslij</button>
+            </form>
             <!-- button close div -->
             <button type="button" class="button button-close" data-modal-close>&#215;</button>
           </div>
@@ -375,6 +412,14 @@
       </ul>
 
       <!-- column 3 newsletter -->
+      <form name="newsletter" class="newsletter" autocomplete="on" action="">
+        <h3>zapisz sie do newslettera</h3>
+        <div class="newsletter-input">
+          <label for="email"></label>
+          <input id="email" type="email" name="email" placeholder="E-mail">
+          <button class="button button-main" type="submit">Zapisz sie ></button>
+        </div>
+      </form>
 
     </div>
   </footer>
