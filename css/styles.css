@@ -636,7 +636,7 @@ section h2 {
     transition-duration: 1s;
     transform: scale(1);       
 }
-
+/* contact form on modal window */
   .modal {
     position: fixed;
     top: 50%;
@@ -691,8 +691,10 @@ section h2 {
     border: 1px solid rgba(33 33 33 / .2);
     border-radius: 4px;
 }
-
-.form-field textarea {
+.form-field-comment {
+    margin-bottom: 20px;
+}
+.form-field-comment textarea {
     width: 100%;
     resize: none;
     height: 120px;
@@ -701,9 +703,12 @@ section h2 {
     border-radius: 4px;
     margin: var(--margin-zero);
     /* form field textarea distance plus 10px equals 20px */
-    margin-bottom: 10px;
 }
-.form-field .comment {
+
+/* textarea margin bottom */
+.form-field-comment .comment span {
+    color: var(--color-middle-grey);
+    display: block;
     margin-bottom: 4px;
 }
 
@@ -711,11 +716,12 @@ section h2 {
 display: block;
 height: 40px;
 color: var(--color-middle-grey);
-position: relative;
+
 }
 .form-field label span {
     display: block;
     margin-bottom: 4px;
+    color: var(--color-middle-grey);
   }
 
 /* add svg icon within an input */
@@ -736,7 +742,7 @@ position: relative;
   .form-field input[type="text"],
   .form-field input[type="tel"],
   .form-field input[type="email"] {
-    /* distans between text and icon  */
+    /* distans between icon & text */
     padding-left: calc(16px + 18px + 12px);
   }
   
@@ -744,51 +750,31 @@ position: relative;
   .form-field label input:focus,
   .modal textarea:focus {
     border: 1px solid var(--color-blue);
-   outline: none;
+    outline: none;
   }
  /* sibling element svg located after input when input is focused */
   .form-field label input:focus + .icon {
     --color1: var(--color-blue);
     fill: var(--color-blue);
   }
-  
-/* checkbox */
-.form-field.checkbox-flex {
+  /* checkbox rules position */
+
+  .form-field-rules {
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     gap: 7px;
+    margin-bottom: 30px;
+  }
+/* checkbox label style */
+.form-field-rules label {
+    color: var(--color-middle-grey);
     font-size: 14px;
     line-height: 1.7;
-    margin: var(--margin-zero);
-    margin-bottom: 30px;
 }
-/* checkbox input style */
 
-.checkbox-rules label {
-    color: var(--color-middle-grey);
-}
-.checkbox-rules input[type="checkbox"] {
-    appearance: none;
-    background-color: #fff;
-    font: inherit;
-    color: var(--color-middle-grey);
-    width: 16px;
-    height: 15px;
-    border: 2px solid currentColor;
-}
-.checkbox-rules input[type="checkbox"] {
-    /* ...existing styles */
-  
-    display: grid;
-    place-content: center;
-  }
-.checkbox-rules input[type="checkbox"]::before {
-    /* ...existing styles */
-  
-    transform-origin: bottom left;
-    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
-  }
+/* checkbox */
+
 /* style for regulamin & polityka prywatnosci */
 .checkbox-rules a {
     color: var(--color-blue);
@@ -797,8 +783,8 @@ position: relative;
 form .btn-contact-form {
     width: 200px;
     margin: auto;
-   display: flex;
-   justify-content: center;
+    display: flex;
+    justify-content: center;
 }
   /* button close */
   .button-close {
