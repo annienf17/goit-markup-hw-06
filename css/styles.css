@@ -210,16 +210,20 @@ color: var(--color-blue);
      color: var(--color-text);
      cursor: pointer;
 }
-/* front page button headline */
- .headline .button-main {
+/* front page button headline and footer button main */
+ .button-main {
      padding: 10px 42px;
      background-color: var(--color-blue);
      color: var(--color-white);
      box-shadow: 0 4px 4px 0 rgba(0 0 0 / .15);
      text-align: center;
      letter-spacing: var(--letter-spacing-large);
-     line-height: 1.9;
-    
+     line-height: 1.9; 
+     transition: .25s cubic-bezier(0.4, 0, 0.2, 1); 
+}
+.button-main:hover,
+.button-main:focus {
+    background-color: var(--color-middle-grey); 
 }
 /* front page headline */
  .headline {
@@ -433,12 +437,14 @@ section h2 {
      box-shadow: 0 1px 2px 0 rgba(0 0 0 / .08);
      transition: .25s cubic-bezier(0.4, 0, 0.2, 1); 
 }
- .bttn-group-item:hover {
+ .bttn-group-item:hover,
+ .bttn-group-item:focus {
      background-color: var(--color-blue);
      color: var(--color-white);
      box-shadow: 0px 2px 2px 0px rgba(0 0 0 / .12),
      0px 1px 2px 0px rgba(0 0  0 / .08),
      0px 3px 1px 0px rgba(0 0 0 / .1);
+     outline: none;
 }
 
 /* projects gallery */
@@ -589,16 +595,7 @@ section h2 {
 .footer-social-media li:hover {
     background-color: var(--color-blue);
 }
-/* newsletter */
-.footer .button-main {
-    padding: 10px 42px;
-    background-color: var(--color-blue);
-    color: var(--color-white);
-    box-shadow: 0 4px 4px 0 rgba(0 0 0 / .15);
-    text-align: center;
-    letter-spacing: var(--letter-spacing-large);
-    line-height: 1.9;  
-}
+
 /* newsletter input plus button */
 .newsletter-input-atom {
     display: flex;

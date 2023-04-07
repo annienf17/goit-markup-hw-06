@@ -220,6 +220,7 @@
                     <a href="tel:+48111111111" title="Kontakt telefoniczny">+48 111 111 111</a>
                 </li>
             </ul>
+
             <!-- column 2 -->
             <ul class="join-us">
                 <!-- block of icons -->
@@ -248,18 +249,22 @@
                 </div>
             </ul>
 
-
             <!-- column 3 newsletter -->
             <form name="newsletter" class="newsletter" autocomplete="on" action="">
                 <h3>zapisz sie do newslettera</h3>
                 <div class="newsletter-input">
                     <label for="email"></label>
-                    <input id="email" type="email" name="email" placeholder="E-mail">
-                    <button class="button button-main" type="submit">Zapisz sie ></button>
+                    <div class="newsletter-input-atom">
+                        <input id="email" type="email" name="email" placeholder="E-mail">
+                        <button class="button button-main send" type="submit">Zapisz sie <svg width="24" height="24">
+                                <use href="./images/icons.svg#icon-send"></use>
+                            </svg></button>
+                    </div>
+
                 </div>
             </form>
-        </div>
 
+        </div>
     </footer>
 </body>
 </html>
